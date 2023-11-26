@@ -4,6 +4,7 @@ import "./App.css";
 import Header from "./components/Header/Header";
 
 import Card from "./components/Card/Card";
+import ChartComponent from "./components/Chart/Chart";
 
 const App = () => {
 	return (
@@ -11,6 +12,7 @@ const App = () => {
 			<Header />
 			<div className="card_and_chart">
 				<Card />
+				<ChartComponent />
 			</div>
 		</main>
 	);

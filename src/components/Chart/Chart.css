@@ -1,0 +1,8 @@
+.apexcharts-toolbar {
+	display: none !important;
+}
+
+.chart-component {
+	background-color: #ffff;
+	border-radius: 5px;
+}
