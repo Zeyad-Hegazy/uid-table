@@ -1,0 +1,152 @@
+* {
+	z-index: 5;
+}
+
+.card {
+	height: 264px;
+	width: 408px;
+	background-image: url("../../assets/card.png");
+	background-size: cover;
+	position: relative;
+}
+
+.masked-lines {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	background-image: url("../../assets/lines-group.png");
+	background-size: contain;
+}
+
+.trash {
+	width: 22px;
+	height: 22px;
+	position: absolute;
+	top: 2rem;
+	left: 2rem;
+	cursor: pointer;
+}
+
+.top-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 2rem;
+}
+
+.card-title {
+	font-family: 600;
+	font-size: 14px;
+	font-family: Neo Sans Arabic;
+	margin-bottom: 20px;
+	color: #ffffff;
+}
+
+.copy-cont {
+	width: fit-content;
+	padding: 8px 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 15px;
+	background-color: #ffffff;
+	border-radius: 5px;
+	margin-bottom: 15px;
+}
+
+.copy-cont img {
+	height: 15px;
+	width: 15px;
+	cursor: pointer;
+}
+
+.copy-cont p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 500;
+	font-size: 13px;
+	color: #1c1c28;
+}
+
+.ticket-date {
+	font-weight: 400;
+	font-family: Neo Sans Arabic;
+	font-size: 12px;
+	color: #ffffff;
+}
+
+.dashed-line {
+	position: absolute;
+	width: 94%;
+	height: 3px;
+	top: 56%;
+	left: 15px;
+	background-image: url("../../assets/dashed-line.png");
+	background-size: contain;
+	z-index: 7;
+}
+
+.bottom-card {
+	margin-top: 37px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-inline: 2rem;
+	flex-wrap: wrap;
+}
+
+.share_and_sale {
+	margin-top: 10px;
+	width: fit-content;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: end;
+	gap: 1.25rem;
+}
+
+.share_btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	border: 1px solid #ffffff;
+	background-color: transparent;
+	border-radius: 4px;
+	padding: 4px;
+	cursor: pointer;
+}
+
+.share_and_sale span {
+	font-family: Neo Sans Arabic;
+	color: #ffffff;
+}
+
+.share_and_sale img {
+	width: 16px;
+	height: 16px;
+}
+
+.sale p {
+	font-family: Neo Sans Arabic;
+	font-weight: 400;
+	font-size: 14px;
+	color: #ffffff;
+}
+
+.sale span {
+	display: block;
+	margin-top: 15px;
+	margin-bottom: 5px;
+	font-weight: 500;
+	font-size: 18px;
+}
+
+@media screen and (max-width: 400px) {
+	.card {
+		height: fit-content;
+	}
+}

@@ -1,0 +1,12 @@
+.app {
+	background-color: #f3f3f5;
+	padding: 2rem;
+}
+
+.card_and_chart {
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}

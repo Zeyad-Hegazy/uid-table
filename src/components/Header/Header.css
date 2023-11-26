@@ -1,0 +1,54 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.edit-btn,
+.back-btn {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 0.75rem;
+}
+
+.edit-btn {
+	background-color: #ffff;
+	border-radius: 4px;
+	cursor: pointer;
+	padding: 7px;
+}
+
+.edit-btn span {
+	display: block;
+	font-size: 14px;
+	font-weight: 400;
+	color: #1c1c28;
+	font-family: Neo Sans Arabic;
+}
+
+.edit-btn img {
+	width: 15px;
+	height: 15px;
+}
+
+.ticket-id {
+	font-size: 16px;
+	font-weight: 700;
+	color: #1c1c28;
+	font-family: Neo Sans Arabic;
+}
+
+.arrow-cont {
+	padding: 8px;
+	width: 32px;
+	height: 32px;
+	background-color: #e7eaed;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.arrow {
+	max-width: 100%;
+	max-height: 100%;
+}
