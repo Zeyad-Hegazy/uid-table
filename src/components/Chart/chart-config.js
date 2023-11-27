@@ -39,6 +39,45 @@ export const chartOptions = {
 		x: {
 			show: false,
 		},
+		custom: function ({ series, seriesIndex, dataPointIndex, w }) {
+			const seriesName = w.globals.seriesNames[seriesIndex];
+			const dataValue = series[seriesIndex][dataPointIndex];
+
+			return `<div style="
+			background-color:#1E1B39;
+			
+			padding: 5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	border-radius: 4px; gap:5px;">
+	
+	<p style="	display: flex;
+	flex-direction: row-reverse;
+	font-size: 12.11px;
+	font-weight: 400;
+	font-family: Neo Sans Arabic; gap:3px;">
+	<span>${dataValue}</span>
+	<span>${seriesName}</span>
+					</p>
+					<div style="display:flex; gap:3px;  justify-content: flex-end;">
+					<span style="	font-weight: 500;
+	font-size: 10px;
+	color: #8a74f9;
+	">13% </span>
+	<span style="
+	height: 10px;
+	width: 10px;
+	border-radius: 50%;
+	background-color: #8a74f9;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+				" >
+			</span>
+				</div>
+				</div>`;
+		},
 	},
 	fill: {
 		type: "gradient",
