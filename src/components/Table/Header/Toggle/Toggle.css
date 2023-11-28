@@ -1,0 +1,41 @@
+.toggle-cont {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.toggle {
+	width: 34px;
+	height: 18px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	background-color: #e8e8e8;
+	border-radius: 10px;
+}
+
+.toggle.toggled {
+	background-color: #8a74f9;
+}
+
+.circle {
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	background-color: #ffff;
+	position: absolute;
+	right: 0;
+	transition: transform 0.3s ease-in-out;
+}
+
+.toggled .circle {
+	transform: translateX(-18px);
+}
+
+.text {
+	font-weight: 400;
+	font-size: 14px;
+	font-family: Neo Sans Arabic;
+	color: #9c9d9f;
+}

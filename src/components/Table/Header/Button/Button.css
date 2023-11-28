@@ -1,0 +1,10 @@
+.btn {
+	width: auto;
+	padding: 5px 8px;
+	background-color: #8a74f9;
+	font-size: 12px;
+	font-weight: 400;
+	font-family: Neo Sans Arabic;
+	color: #fcfcfc;
+	border-radius: 5px;
+}
