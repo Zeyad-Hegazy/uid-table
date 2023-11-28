@@ -5,4 +5,60 @@
 .chart-component {
 	background-color: #ffff;
 	border-radius: 5px;
+	height: 264px;
+}
+
+.chart-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-inline: 15px;
+	padding-top: 20px;
+	flex-wrap: wrap;
+}
+
+.filter select {
+	/* appearance: none;
+	-webkit-appearance: none;
+	-appearance: none; */
+
+	padding: 5px;
+	background-color: #fafafa;
+	border-radius: 5px;
+	border: Mixed solid #e8e8e8;
+	font-family: Neo Sans Arabic;
+	position: relative;
+	outline: none;
+}
+
+/* .filter select::before {
+	content: "j";
+	position: absolute;
+	right: 0px;
+	top: 0;
+	height: 10px;
+	width: 5px;
+	pointer-events: none;
+	color: black;
+} */
+
+.chart-title h3 {
+	margin-bottom: 10px;
+	font-size: 18px;
+	font-weight: 500;
+	color: #1c1c28;
+	font-family: Neo Sans Arabic;
+}
+
+.chart-title p {
+	font-size: 14px;
+	font-weight: 400;
+	font-family: Neo Sans Arabic;
+	line-height: 12.9px;
+	color: #92a1ad;
+}
+
+.chart-title p span {
+	margin-right: 5px;
+	margin-bottom: 5px;
 }
