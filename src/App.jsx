@@ -5,6 +5,7 @@ import Header from "./components/Header/Header";
 
 import Card from "./components/Card/Card";
 import ChartComponent from "./components/Chart/Chart";
+import Table from "./components/Table/Table";
 
 const App = () => {
 	return (
@@ -14,6 +15,7 @@ const App = () => {
 				<Card />
 				<ChartComponent />
 			</div>
+			<Table />
 		</main>
 	);
 };
