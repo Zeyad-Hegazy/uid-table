@@ -1,5 +1,6 @@
 import "./Table.css";
 import { Button, Toggle, Search } from "./Header";
+import TableComponent from "./Table-component/TableComponent";
 
 const Table = () => {
 	return (
@@ -12,8 +13,7 @@ const Table = () => {
 				<Search />
 			</div>
 
-			{/* TODO */}
-			{/* Write Table Component Here*/}
+			<TableComponent />
 		</div>
 	);
 };

@@ -1,0 +1,21 @@
+.table {
+	background-color: #ffff;
+	margin-top: 15px;
+	padding: 10px;
+}
+
+.p-datatable-table {
+	min-width: 100%;
+}
+
+.p-datatable-thead {
+	background-color: #e3e4e9;
+	height: 2rem;
+	font-family: Neo Sans Arabic;
+	font-size: 13px;
+	font-weight: 400;
+}
+
+.p-datatable-tbody {
+	text-align: center;
+}
