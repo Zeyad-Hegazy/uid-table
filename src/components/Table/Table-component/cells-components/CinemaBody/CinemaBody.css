@@ -1,0 +1,26 @@
+.tabel_cell {
+	color: #1c1c28;
+	font-weight: 400;
+	font-family: Neo Sans Arabic;
+	padding: 15px;
+	font-size: 15px;
+}
+
+.overloadCinamas {
+	display: none;
+	position: absolute;
+	left: 65px;
+	top: -20px;
+	padding: 5px 8px;
+	background-color: #1c1c28;
+	color: #ffff;
+	border-radius: 5px;
+	transition: all 1s ease-in-out;
+}
+
+.cenima {
+	position: relative;
+}
+.cenima:hover .overloadCinamas {
+	display: block;
+}

@@ -3,44 +3,8 @@ import { Column } from "primereact/column";
 import { tableData } from "../table-config";
 import "./TableComponent.css";
 
-const nameBody = ({ user, img, phoneNumber }) => {
-	return (
-		<div className="tabel_cell name">
-			<div>
-				<img src={img} alt="user image" />
-			</div>
-			<div className="name_label">
-				<p>{user}</p>
-				<span>{phoneNumber}</span>
-			</div>
-		</div>
-	);
-};
-
-const cenmaBody = (data) => {
-	let overloadCinamas;
-	let cinams;
-
-	if (data.cinams.length > 4) {
-		overloadCinamas = data.cinams.slice(4, data.cinams.length);
-		cinams = data.cinams.slice(0, 4);
-	} else {
-		cinams = data.cinams;
-	}
-
-	return (
-		<>
-			<div className="cenima">
-				{overloadCinamas && (
-					<span className="overloadCinamas">{overloadCinamas.join(" , ")}</span>
-				)}
-				<div className="tabel_cell">
-					{cinams.join(" , ")} {overloadCinamas && <span>...</span>}
-				</div>
-			</div>
-		</>
-	);
-};
+import NameBody from "./cells-components/NameBody/NameBody";
+import CinemaBody from "./cells-components/CinemaBody/CinemaBody";
 
 const TableComponent = () => {
 	return (
@@ -56,7 +20,7 @@ const TableComponent = () => {
 						padding: "15px",
 					}}
 				/>
-				<Column field="user" header="المستخدم" body={nameBody} />
+				<Column field="user" header="المستخدم" body={NameBody} />
 				<Column
 					field="ticketNo"
 					header="رقم التذكرة"
@@ -79,7 +43,7 @@ const TableComponent = () => {
 						fontSize: "13.28px",
 					}}
 				/>
-				<Column field="cinams" header="السينمات" body={cenmaBody} />
+				<Column field="cinams" header="السينمات" body={CinemaBody} />
 				<Column
 					field="numberOfpeople"
 					header="عدد الاشخاص"
