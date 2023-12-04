@@ -3,6 +3,45 @@ import { Column } from "primereact/column";
 import { tableData } from "../table-config";
 import "./TableComponent.css";
 
+const nameBody = ({ user, img, phoneNumber }) => {
+	return (
+		<div className="tabel_cell name">
+			<div>
+				<img src={img} alt="user image" />
+			</div>
+			<div className="name_label">
+				<p>{user}</p>
+				<span>{phoneNumber}</span>
+			</div>
+		</div>
+	);
+};
+
+const cenmaBody = (data) => {
+	let overloadCinamas;
+	let cinams;
+
+	if (data.cinams.length > 4) {
+		overloadCinamas = data.cinams.slice(4, data.cinams.length);
+		cinams = data.cinams.slice(0, 4);
+	} else {
+		cinams = data.cinams;
+	}
+
+	return (
+		<>
+			<div className="cenima">
+				{overloadCinamas && (
+					<span className="overloadCinamas">{overloadCinamas.join(" , ")}</span>
+				)}
+				<div className="tabel_cell">
+					{cinams.join(" , ")} {overloadCinamas && <span>...</span>}
+				</div>
+			</div>
+		</>
+	);
+};
+
 const TableComponent = () => {
 	return (
 		<div className="table" dir="rtl">
@@ -17,17 +56,7 @@ const TableComponent = () => {
 						padding: "15px",
 					}}
 				/>
-				<Column
-					field="user"
-					header="المستخدم"
-					bodyStyle={{
-						color: "#1C1C28",
-						fontWeight: "400",
-						fontFamily: "Neo Sans Arabic",
-						padding: "15px",
-						fontSize: "15px",
-					}}
-				/>
+				<Column field="user" header="المستخدم" body={nameBody} />
 				<Column
 					field="ticketNo"
 					header="رقم التذكرة"
@@ -35,7 +64,7 @@ const TableComponent = () => {
 						color: "13.28px",
 						fontWeight: "500",
 						fontFamily: "Arial",
-						padding: "15px",
+						padding: "20px",
 						fontSize: "13.28px",
 					}}
 				/>
@@ -46,20 +75,11 @@ const TableComponent = () => {
 						color: "13.28px",
 						fontWeight: "500",
 						fontFamily: "Arial",
-						padding: "15px",
+						padding: "20px",
 						fontSize: "13.28px",
 					}}
 				/>
-				<Column
-					field="cinams"
-					header="السينمات"
-					bodyStyle={{
-						color: "#898995",
-						fontWeight: "400",
-						fontFamily: "Arial",
-						padding: "15px",
-					}}
-				/>
+				<Column field="cinams" header="السينمات" body={cenmaBody} />
 				<Column
 					field="numberOfpeople"
 					header="عدد الاشخاص"
